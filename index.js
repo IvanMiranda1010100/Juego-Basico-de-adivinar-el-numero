@@ -8,6 +8,7 @@ const guessInput = document.getElementById('guessInput');
 const message = document.getElementById('message');
 const imageContainer=document.getElementById("imageContainer")
 const ImageResultado=document.getElementById("img")
+const ButtonNuevoJuego=document.getElementById("button-juego-nuevo")
 
 // Contador de intentos
 let attempts = 0;
@@ -24,6 +25,7 @@ function checkGuess() {
   if (guess === randomNumber) {
     message.textContent = `¡Felicidades! Adivinaste el número en ${attempts} intentos.`;
     message.style.color = 'green';
+    ButtonNuevoJuego.style.display="block"
     guessInput.disabled = true;
   } else if (guess < randomNumber) {
     message.textContent = 'El número es más grande. Intenta de nuevo.';
@@ -68,3 +70,8 @@ function checkGuess() {
   // Limpia la entrada
   guessInput.value = '';
 }
+
+document.getElementById('button-juego-nuevo').addEventListener('click', function() {
+  // Recargar la página
+  location.reload();
+});
