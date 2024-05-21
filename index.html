@@ -7,11 +7,21 @@
   <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-  <h1>Adivina el número</h1>
-  <p>Intenta adivinar un número entre 1 y 10:</p>
-  <input type="text" id="guessInput">
-  <button onclick="checkGuess()">Adivinar</button>
-  <p id="message"></p>
+  <div class="container">
+    <h1>Adivina el número</h1>
+    <p>Intenta adivinar un número entre 1 y 10:</p>
+    
+    <div class="input-container">
+      <input type="text" id="guessInput">
+      <button onclick="checkGuess()">Adivinar</button>
+    </div>
+
+    <div id="imageContainer">
+      <img id="img" src="">
+    </div>
+    
+    <p id="message"></p>
+  </div>
   
   <script src="./index.js"></script>
 </body>
